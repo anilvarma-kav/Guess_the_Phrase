@@ -44,4 +44,71 @@ class Game {
         randomPhrase.addPhraseToDisplay();
         this.activePhrase = randomPhrase;
     };
+    /**
+     * Checks for winning move
+     * @return {boolean} True if game has been won, false if game wasn't
+     won
+     */
+    checkForWin() {
+        var hiddenLetters = document.getElementsByClassName('hide');
+        if(hiddenLetters.length === 0)
+            return true;
+        else{
+            return false;
+        }
+
+    }
+
+    /**
+     * Increases the value of the missed property
+     * Removes a life from the scoreboard
+     * Checks if player has remaining lives and ends game if player is out
+     */
+    removeLife() {
+        this.missed += 1;
+        var lives = document.getElementsByClassName('tries');
+        lives[this.missed-1].firstElementChild.src = "Images/lostHeart.png";
+        if(this.missed === 5){
+            this.gameOver(false);
+        }
+
+    }
+
+    /**
+     * Displays game over message
+     * @param {boolean} gameWon - Whether or not the user won the game
+     */
+    gameOver(gameWon) {
+        var overlay = document.getElementById('overlay');
+        overlay.style.display = "";
+        if(gameWon){
+            document.querySelector('#overlay > h1').textContent = "You Won The Game";
+            overlay.className = "win";
+        }
+        else{
+            document.querySelector('#overlay > h1').textContent = "Bummer, You lost all your Lives. Please try again ";
+            overlay.className = "lose";
+        }
+    }
+    /**
+     * Handles onscreen keyboard button clicks
+     * @param (HTMLButtonElement) button - The clicked button element
+     */
+    handleInteraction(button) {
+        button.disabled = true;
+        var selectedLetter = button.textContent;
+        if(this.activePhrase.checkLetter(selectedLetter)){
+            button.className = "chosen";
+            this.activePhrase.showMatchedLetter(selectedLetter);
+            if(this.checkForWin()){
+                this.gameOver(true);
+            };
+        }
+        else{
+            button.className = "wrong";
+            this.removeLife();
+        }
+    };
+
+
 }
