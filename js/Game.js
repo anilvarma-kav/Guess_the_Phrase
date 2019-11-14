@@ -1,6 +1,8 @@
-/* Anil Varma Keerthipati
- * Project - Guess_The_Phrase
- * Game.js */
+/**
+ * Guess The Phrase
+ * Anil Varma Keerthipati
+ * Game.js
+ **/
 
 class Game {
     constructor(){
@@ -21,7 +23,10 @@ class Game {
         const phrase5 = new Phrase('An Arm and a Leg');
         const phrase6 = new Phrase('Beating Around the Bush');
         const phrase7 = new Phrase('Curiosity Killed The Cat');
-        const phrases = [phrase1, phrase2, phrase3, phrase4, phrase5, phrase6, phrase7];
+        const phrase8 = new Phrase('Kick the Bucket');
+        const phrase9 = new Phrase('Breathing down my neck');
+
+        const phrases = [phrase1, phrase2, phrase3, phrase4, phrase5, phrase6, phrase7, phrase8, phrase9];
         return phrases;
     }
 

@@ -1,6 +1,9 @@
-/* Anil Varma Keerthipati
- * Project - Guess_The_Phrase
- * Phrase.js */
+/**
+ * Guess The Phrase
+ * Anil Varma Keerthipati
+ * Phrase.js
+ **/
+
 class Phrase {
     constructor(phrase){
         this.phrase = phrase.toLowerCase();

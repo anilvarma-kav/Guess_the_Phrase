@@ -1,13 +1,16 @@
 # Guess_the_Phrase
  Dare to guess the random phrase. 
  
- This is a small phrase guessing game that was developed using JavaScript
+This is a small phrase guessing game that was developed using JavaScript
 and OOP(Object Oriented Programming) to select a random, hidden phrase, which a player tries to 
-guess, by clicking letters on an onscreen keyboard.
+guess, by clicking letters on onscreen keyboard.
+
+Added Feature:
+Now player can also choose letters from system keyboard
 
 ## Game Rules:
 * The player’s goal is to guess all the letters in a hidden, random phrase. At the beginning, the player only sees the number of letters and words in the phrase, represented by blank boxes on the screen.
-* The player clicks an onscreen keyboard to guess letters in the phrase.
+* The player can use onscreen keyboard by clicking ith mouse or system keyboard to guess letters in the phrase.
 * The letter is disabled on the onscreen keyboard and a player can't select that letter again.
 * If the selected letter is not in the phrase, one of the player's hearts in the scoreboard is changed from a "live" heart to a "lost" heart.
 * The player keeps choosing letters until they reveal all the letters in the phrase, or they make five incorrect guesses.
