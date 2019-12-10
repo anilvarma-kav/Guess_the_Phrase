@@ -18,5 +18,9 @@ Now player can also choose letters from system keyboard
 * Clone or download the repository to your computer
 * Open the project root folder and double click on index.html
 * Then the Guess_the_Phrase javascript game will appear on the default browser tab
+
+## Hosted in Git Hub Pages:
+https://anilvarma-kav.github.io/Guess_the_Phrase/
+
 ## Acknowledgement:
 1. TeamTreehouse [https://teamtreehouse.com/]
