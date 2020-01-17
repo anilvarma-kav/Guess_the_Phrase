@@ -20,7 +20,7 @@ function resetGameBoard() {
     //Resetting all heart images
     let hearts = document.querySelectorAll('.tries > img');
     for(let i=0; i<hearts.length; i++){
-        hearts[i].src = "Images/liveHeart.png";
+        hearts[i].src = "images/liveHeart.png";
     }
 }
 function keyCliked(e) {
