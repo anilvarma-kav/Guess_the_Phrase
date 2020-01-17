@@ -72,7 +72,7 @@ class Game {
     removeLife() {
         this.missed += 1;
         var lives = document.getElementsByClassName('tries');
-        lives[this.missed-1].firstElementChild.src = "Images/lostHeart.png";
+        lives[this.missed-1].firstElementChild.src = "images/lostHeart.png";
         if(this.missed === 5){
             this.gameOver(false);
         }
